@@ -103,3 +103,13 @@ input:focus{
    outline: none;
 
 }
+
+@media only screen and (max-width: 550px) {
+    .head{
+        color: #bcc3d3;
+    }
+    .title{
+        justify-content: center;
+        
+    }
+}
