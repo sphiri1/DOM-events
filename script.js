@@ -11,16 +11,23 @@ function addDeleteButton(){
 }
 
 function createListElement(){
-	var div = document.createElement("div");
+	//create Element
     var li = document.createElement("li");
     var button = document.createElement("button");
+	var span = document.createElement("span");
+
+	//append to element
 	li.appendChild(document.createTextNode(input.value));
-	button.appendChild(document.createTextNode("Delete"));
-	button.setAttribute("Id", "Delete");
-	div.setAttribute("class", "listitem-wrapper");
-	div.appendChild(li);
-	div.appendChild(button);
-	ul.appendChild(div);
+	button.appendChild(document.createTextNode("done"));
+
+	//set attributes
+	li.setAttribute("class", "list-group-item d-flex justify-content-between align-items-center done")
+	button.setAttribute("Id", "delete");
+	button.setAttribute("class", "material-symbols-outlined")
+
+	//append child to parent
+	li.appendChild(button);
+	ul.appendChild(li);
 	input.value = "";
 }
 
@@ -37,11 +44,11 @@ function addListAfterKeypress(event){
 }
 
 function toggleAndRemove(element){
-	var li = element.target;
-	 if(li.tagName == "LI"){
-	 	li.classList.toggle("done")
-	 } else if (li.tagName == "BUTTON"){
-	 	li.parentNode.remove();
+	var button = element.target;
+	 if(button.tagName == "LI"){
+	 	button.classList.toggle("done")
+	 } else if (button.tagName == "BUTTON"){
+	 	button.parentNode.remove();
 	 }
 	
 }

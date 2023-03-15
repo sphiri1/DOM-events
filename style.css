@@ -1,5 +1,105 @@
+body, html{
+    font-family: 'Roboto', sans-serif !important;
+    background-color: #292b36 !important;
+}
+
+.homepage{
+    background: url(./background.jpg) center top no-repeat fixed;
+    background-size: cover;
+    -webkit-backround-size:cover;
+    -moz-background-size: cover;
+    -o-background-size:cover;
+    border-radius: 5px;
+    margin-left:25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    padding-top:3vh;     
+}
+
+.head{
+    padding:5px;
+    color: #292b36;
+}
+
+.title{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.add-task{
+    padding: 0.75rem 1.25rem;
+    background-color:#292b36bf;
+    border-radius: 5px;
+}
+
+.add-task:hover, .add-task:focus, .add-task:active{
+    background-color: #292b36b5;
+  }
+
+.list-group-item:hover{
+    background-color: #292b36b5 !important;
+}
+
+
+input{
+    background-color: transparent;
+    border: none;
+    font-size: small !important;
+    width:100%;
+    color: #bcc3d3;
+}
+
+input:focus{
+    outline: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #bcc3d3;
+    opacity: 1; /* Firefox */
+    font-size: small;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #bcc3d3;
+    font-size: small;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #bcc3d3;
+    font-size: small;
+    
+  }
+
+.list-group{
+    gap:10px;
+    font-size: small;
+    color: #bcc3d3;
+}
+
+.list-group-item{
+    background-color:#292b36  !important;
+    border-radius: 5px;
+}
+
 .listitem-wrapper{
 	display: flex;
     justify-content: space-between;
     width: 20vw;
+}
+
+#delete, #enter{
+    background-color: transparent !important;
+    border: none !important;
+    color:#bcc3d3;
+}
+
+#delete:hover, #enter:hover{
+    cursor: pointer;
+    color: #7993b8;
+}
+
+#delete:focus, #enter{
+   outline: none;
+
 }
